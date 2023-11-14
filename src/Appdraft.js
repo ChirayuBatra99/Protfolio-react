@@ -1,0 +1,32 @@
+import React from 'react';
+import './App.css';
+import { Route, Routes, BrowserRouter as Router  } from 'react-router-dom'
+import NavBar from './components/Navbar';
+import Projects from './pages/Projects';
+import Experience from './pages/Experience';
+import Home from './pages/Home';
+
+function Hom() {
+  return <h1> hello </h1>
+}
+
+function App() {
+  return (
+    <div>
+
+      <Router>
+      <Projects/>
+
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
+      </Router>
+    </div>
+
+
+  );
+}
+
+export default App;
